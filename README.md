@@ -17,11 +17,14 @@ python3 -m http.server 8000
 # http://localhost:8000/telegram/
 ```
 
-## Pendência
+## Assets
 
-As páginas referenciam 13 arquivos em `../assets/` (11 vídeos de prova social e a foto do
-bloco de perfil). Essa pasta ainda não está no repositório — enquanto não estiver na raiz do
-site, o carrossel de provas sociais e o avatar do perfil ficam quebrados.
+`assets/` fica na raiz e é compartilhada pelas duas páginas:
+
+- `assets/provas/prova-0*.jpg` — 6 prints de conversa que alimentam o carrossel
+- `assets/perfil.jpg` — avatar do bloco de perfil
+
+As páginas referenciam por `../assets/...`, então a pasta precisa continuar na raiz do site.
 
 ## Rastreamento
 
