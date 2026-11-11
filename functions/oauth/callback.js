@@ -1,8 +1,7 @@
 // Volta do login "Entrar com a Safirion" do minicurso da Suzana.
-// Este é o redirect aprovado na Quadcode para o app OAuth "Suzana Trader". A troca do code
-// pelo token acontece no servidor (maquinadolar.com/oauth/minicurso/volta/), que guarda o
-// client_secret. Aqui só repassamos code, state e error.
-const DESTINO = "https://maquinadolar.com/oauth/minicurso/volta/";
+// Este é o redirect aprovado na Quadcode para o app OAuth "Suzana Trader". Aqui só
+// repassamos code, state e error ao minicurso, que faz a troca do code no servidor.
+const DESTINO = "https://minicurso-suzana.pages.dev/api/safirion/volta";
 
 export function onRequestGet({ request }) {
   const entrada = new URL(request.url).searchParams;
